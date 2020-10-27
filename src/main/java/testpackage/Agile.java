@@ -1,13 +1,13 @@
 package testpackage;
 
-public class PlayBanjo {
+public class Agile {
 
     public static String banjo(String name){
-        char firstChar = name.charAt(0);
-        if(name.charAt(0) == 'r'){
-            return name + " plays banjo";
+
+        if(name == ""){
+            return name + " does not play banjo";
         }
-        else if(name.charAt(0) == 'R'){
+        else if(name.charAt(0) == 'R' || name.charAt(0) == 'r'){
             return name + " plays banjo";
         }
         else {
@@ -15,5 +15,4 @@ public class PlayBanjo {
         }
 
     }
-
 }
