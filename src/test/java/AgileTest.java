@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static testpackage.Agile.invert;
 public class AgileTest {
+
         @Test
         @DisplayName("When given an empty array we expect back an empty array.")
         void testEmptyArray(){
@@ -11,6 +12,7 @@ public class AgileTest {
             int[] actual = invert(emptyArray);
             assertArrayEquals(expected,actual);
         }
+
         @Test
         @DisplayName("when given an array of zeros we expect an array of zeros to be returned.")
         void testZeroArray(){
@@ -19,6 +21,7 @@ public class AgileTest {
             int[] actual= invert(zeroArray);
             assertArrayEquals(expected,actual);
         }
+
         @Test
         @DisplayName("when given an array of one positive number we expect back a negative number.")
         void testInverseOfOnePositiveNumber(){
@@ -27,6 +30,7 @@ public class AgileTest {
             int[] actual = invert(positive);
             assertArrayEquals(expected,actual);
         }
+
         @Test
         @DisplayName("when given an array of one positive number we expect back a negative number.")
         void testInverseOfOneNegativeNumber(){
@@ -35,6 +39,7 @@ public class AgileTest {
             int[] actual = invert(negative);
             assertArrayEquals(expected,actual);
         }
+
         @Test
         @DisplayName("when given an array of multiple positive " +
                 "numbers we expect back multiple negative numbers.")
@@ -44,6 +49,7 @@ public class AgileTest {
             int[] actual = invert(positive);
             assertArrayEquals(expected,actual);
         }
+
         @Test
         @DisplayName("when given an array of multiple positive " +
                 "numbers we expect back multiple negative numbers.")
@@ -53,6 +59,7 @@ public class AgileTest {
             int[] actual = invert(negative);
             assertArrayEquals(expected,actual);
         }
+
         @Test
         @DisplayName("when given an array of multiple positive and negative " +
                 "numbers we expect back multiple positive and negative numbers.")
@@ -62,4 +69,4 @@ public class AgileTest {
             int[] actual = invert(mixed);
             assertArrayEquals(expected,actual);
         }
-        }
+}
