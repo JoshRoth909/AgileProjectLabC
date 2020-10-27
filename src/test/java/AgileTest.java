@@ -37,9 +37,43 @@ public class AgileTest {
             int[] actual = invert(positive);
             assertArrayEquals(expected,actual);
         }
-//    when given an array of one negative number we expect back a positive number.
-//    when given an array of multiple positive numbers we expect back multiple negative numbers.
-//    when given an array of multiple negative numbers we expect back multiple positive numbers.
-//    when given an array of multiple mixed numbers we expect back multiple inverse mixed numbers.
 
+@Test
+@DisplayName("when given an array of one positive number we expect back a negative number.")
+void testInverseOfOneNegativeNumber(){
+    int[] expected = {1};
+    int[] negative = {-1};
+    int[] actual = invert(negative);
+    assertArrayEquals(expected,actual);
+}
+
+@Test
+@DisplayName("when given an array of multiple positive " +
+        "numbers we expect back multiple negative numbers.")
+void testInverseOfMultiplePositiveNumbers(){
+    int[] expected = {-1,-1,-1,-1};
+    int[] positive = {1,1,1,1};
+    int[] actual = invert(positive);
+    assertArrayEquals(expected,actual);
+}
+
+@Test
+@DisplayName("when given an array of multiple positive " +
+        "numbers we expect back multiple negative numbers.")
+void testInverseOfMultipleNegativeNumbers(){
+    int[] expected = {1,1,1,1};
+    int[] negative = {-1,-1,-1,-1};
+    int[] actual = invert(negative);
+    assertArrayEquals(expected,actual);
+}
+
+@Test
+@DisplayName("when given an array of multiple positive and negative " +
+        "numbers we expect back multiple positive and negative numbers.")
+void testInverseOfMultipleMixedNumbers(){
+    int[] expected = {1,-1,1,-1};
+    int[] mixed = {-1,1,-1,1};
+    int[] actual = invert(mixed);
+    assertArrayEquals(expected,actual);
+}
 }
